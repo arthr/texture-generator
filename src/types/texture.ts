@@ -8,6 +8,9 @@ export type TextureSettings = {
 	noiseIntensity: number;
 	patternType: "dots" | "lines" | "grid";
 	size: TextureSize;
+	hasBorder: boolean;
+	borderColor: string;
+	borderWidth: number;
 };
 
 export const texturePresets = {
@@ -19,6 +22,9 @@ export const texturePresets = {
 		noiseIntensity: 0.3,
 		patternType: "dots",
 		size: 128,
+		hasBorder: false,
+		borderColor: "#000000",
+		borderWidth: 1,
 	},
 	"Gradiente Sunset": {
 		type: "gradient",
@@ -28,6 +34,9 @@ export const texturePresets = {
 		noiseIntensity: 0.5,
 		patternType: "dots",
 		size: 128,
+		hasBorder: false,
+		borderColor: "#000000",
+		borderWidth: 1,
 	},
 	"Grade Metálica": {
 		type: "pattern",
@@ -37,6 +46,9 @@ export const texturePresets = {
 		noiseIntensity: 0.5,
 		patternType: "grid",
 		size: 128,
+		hasBorder: false,
+		borderColor: "#000000",
+		borderWidth: 1,
 	},
 	"Pontos Pixel": {
 		type: "pattern",
@@ -46,5 +58,8 @@ export const texturePresets = {
 		noiseIntensity: 0.5,
 		patternType: "dots",
 		size: 128,
+		hasBorder: false,
+		borderColor: "#000000",
+		borderWidth: 1,
 	},
 } as const;

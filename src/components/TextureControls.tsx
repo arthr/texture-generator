@@ -136,6 +136,51 @@ const TextureControls = ({
 				/>
 			</Control>
 
+			<Control>
+				<Label>
+					<input
+						type="checkbox"
+						checked={settings.hasBorder}
+						onChange={(e) =>
+							handleChange("hasBorder", e.target.checked)
+						}
+					/>{" "}
+					Adicionar Borda
+				</Label>
+			</Control>
+
+			{settings.hasBorder && (
+				<>
+					<Control>
+						<Label>Cor da Borda</Label>
+						<Input
+							type="color"
+							value={settings.borderColor}
+							onChange={(e) =>
+								handleChange("borderColor", e.target.value)
+							}
+						/>
+					</Control>
+
+					<Control>
+						<Label>Espessura da Borda</Label>
+						<Input
+							type="range"
+							min="1"
+							max="10"
+							step="1"
+							value={settings.borderWidth}
+							onChange={(e) =>
+								handleChange(
+									"borderWidth",
+									parseInt(e.target.value)
+								)
+							}
+						/>
+					</Control>
+				</>
+			)}
+
 			{settings.type === "noise" && (
 				<Control>
 					<Label>Intensidade do Ruído</Label>

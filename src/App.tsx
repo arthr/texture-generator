@@ -39,6 +39,9 @@ function App() {
 		noiseIntensity: 0.5,
 		patternType: "dots",
 		size: 128,
+		hasBorder: false,
+		borderColor: "#000000",
+		borderWidth: 1,
 	});
 
 	return (

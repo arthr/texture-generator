@@ -4,16 +4,18 @@ Uma aplicação web para gerar texturas personalizadas que podem ser utilizadas 
 
 ## Funcionalidades
 
-- Geração de diferentes tipos de texturas:
+- Tipos de texturas:
   - Ruído com intensidade ajustável
   - Gradiente diagonal
   - Padrões (pontos, linhas, grade)
-- Tamanhos predefinidos (16x16 até 512x512)
-- Personalização de cores com seletor visual
-- Ajuste de escala dos padrões
-- Predefinições de texturas prontas para uso
+- Personalização:
+  - Tamanhos: 16x16 até 512x512
+  - Cores com seletor visual
+  - Escala dos padrões
+  - Borda customizável (cor e espessura)
+- Predefinições prontas
 - Exportação em PNG
-- Visualização em tempo real
+- Preview em tempo real
 
 ## Tecnologias
 
@@ -32,9 +34,9 @@ npm run dev
 ## Uso
 
 1. Escolha uma predefinição ou tipo de textura
-2. Ajuste o tamanho desejado
-3. Personalize cores e parâmetros
-4. Exporte a textura em PNG
+2. Ajuste tamanho e cores
+3. Personalize parâmetros e borda
+4. Exporte a textura
 
 # React + TypeScript + Vite
 

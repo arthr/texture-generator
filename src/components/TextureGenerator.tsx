@@ -146,6 +146,18 @@ const TextureGenerator = ({ settings }: TextureGeneratorProps) => {
 				generatePattern();
 				break;
 		}
+
+		// Adiciona a borda se necessário
+		if (settings.hasBorder) {
+			ctx.strokeStyle = settings.borderColor;
+			ctx.lineWidth = settings.borderWidth;
+			ctx.strokeRect(
+				settings.borderWidth / 2,
+				settings.borderWidth / 2,
+				canvas.width - settings.borderWidth,
+				canvas.height - settings.borderWidth
+			);
+		}
 	}, [settings]);
 
 	const handleExport = () => {
